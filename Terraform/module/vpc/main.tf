@@ -77,6 +77,9 @@ resource "aws_route_table" "public-route-table" {
     gateway_id = aws_internet_gateway.website-monitoring-igw.id
     cidr_block = var.anywhere-ip
   }
+  tags = {
+    Name = "Website Monitoring Public RT"
+  }
 }
 
 resource "aws_route_table" "private-route-table" {
@@ -84,6 +87,9 @@ resource "aws_route_table" "private-route-table" {
     route {
         gateway_id = aws_nat_gateway.website-monitoring-eip.id
         cidr_block = var.anywhere-ip
+    }
+    tags = {
+      Name = "Website Monitoring Private RT"
     }
 }
 

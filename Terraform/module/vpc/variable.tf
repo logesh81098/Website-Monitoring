@@ -3,11 +3,11 @@ variable "vpc-cidr" {
 }
 
 variable "public-subnet-cidr" {
-  default = "10.0.1.0/32"
+  default = "10.0.1.0/24"
 }
 
 variable "private-subnet-cidr" {
-  default = "10.0.4.0/32"
+  default = "10.0.4.0/24"
 }
 
 variable "anywhere-ip" {
