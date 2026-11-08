@@ -10,3 +10,7 @@ module "security-groups" {
 module "key-pairs" {
   source = "./module/key-pairs"
 }
+
+module "iam" {
+  source = "./module/iam"
+}
